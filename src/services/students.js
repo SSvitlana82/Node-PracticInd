@@ -9,7 +9,7 @@ export const getStudentById = async (studentId) => {
   return student;
 };
 
-export const creatStudent = async (newStudent) => {
+export const createStudent = async (newStudent) => {
   const student = await StudentsCollection.create(newStudent);
   return student;
 };
@@ -19,7 +19,7 @@ export const deleteStudent = async (studentId) => {
   return student;
 };
 
-export const updateStudents = async (studentId, payload, options = {}) => {
+export const updateStudent = async (studentId, payload, options = {}) => {
   const rowResult = await StudentsCollection.findByIdAndUpdate(
     {
       _id: studentId,

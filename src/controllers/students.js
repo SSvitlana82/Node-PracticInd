@@ -4,7 +4,7 @@ import {
   createStudent,
   deleteStudent,
   updateStudent,
-} from '../services/students';
+} from '../services/students.js';
 import createHttpError from 'http-errors';
 
 export const getStudentsController = async (req, res) => {
