@@ -15,22 +15,22 @@ import {
 } from '../validation/students.js';
 
 const router = Router();
-router.get('/students', ctrlWrapper(getStudentsController));
+router.get('/', ctrlWrapper(getStudentsController));
 
-router.get('/students/:studentId', ctrlWrapper(getStudentByIdController));
+router.get('/:studentId', ctrlWrapper(getStudentByIdController));
 router.post(
-  '/students',
+  '/',
   validateBody(createStudentSchema),
   ctrlWrapper(createStudentController),
 );
-router.delete('/students/:studentId', ctrlWrapper(deleteStudentController));
+router.delete('/:studentId', ctrlWrapper(deleteStudentController));
 router.put(
-  '/students/:studentsId',
+  '/:studentsId',
   validateBody(updateStudentSchema),
   ctrlWrapper(upsertStudentController),
 );
 router.patch(
-  '/students/:studentId',
+  '/:studentId',
   validateBody(updateStudentSchema),
   ctrlWrapper(patchStudentController),
 );
